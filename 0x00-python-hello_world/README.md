@@ -9,3 +9,4 @@
 6-concat.py - code concatinating two string with a space
 7-edges.py - code does slicing of a string
 8-concat_edges.py - code concatinating strings cut from a line
+9-easter_egg.py - prints the zen of python
