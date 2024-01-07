@@ -8,3 +8,4 @@
 5-print_string.py - code prints string stored in a var x3 and on a newline its first 9 char
 6-concat.py - code concatinating two string with a space
 7-edges.py - code does slicing of a string
+8-concat_edges.py - code concatinating strings cut from a line
