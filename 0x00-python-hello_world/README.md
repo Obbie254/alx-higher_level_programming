@@ -7,3 +7,4 @@
 4-print_float.py - code prints a float stored in a var with 2 decimal points
 5-print_string.py - code prints string stored in a var x3 and on a newline its first 9 char
 6-concat.py - code concatinating two string with a space
+7-edges.py - code does slicing of a string
