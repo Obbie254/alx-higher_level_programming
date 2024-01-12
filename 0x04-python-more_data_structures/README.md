@@ -6,3 +6,4 @@
 4-only_diff_elements.py - fxn returns a set all elements the only in one set
 5-number_keys.py - fxn retruns no. of keys in a dictionary
 6-print_sorted_dictionary.py - fxn prints a dict by ordered keys
+7-update_dictionary.py - fxn - replaces or adds key/value in a dict
