@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def update_dictionary(a_dictionary, key, value):
     """
-    fxn - replaces or adds a key/value in a dictionary 
+    fxn replaces or adds a key/value in a dictionary
     key argument will always be a string
     value argument will be any type
     """
