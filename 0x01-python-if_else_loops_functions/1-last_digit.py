@@ -21,5 +21,3 @@ elif (last_digit == 0):
     print(myStr.format(number, last_digit, str2))
 elif (last_digit < 6):
     print(myStr.format(number, last_digit, str3))
-else:
-    print("Error")
