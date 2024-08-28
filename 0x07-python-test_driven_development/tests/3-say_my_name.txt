@@ -1,61 +1,71 @@
-A test to for adding two inteter
+************************
+Test -> 3-say_my_name.py
+========================
 
-Import Python module + collections
->>> import sys
->>> sys.path.insert(1, '../')
->>> lib = __import__("0-add_integer")
->>> add_integer = lib.add_integer
+>>> say_my_name = __import__("3-say_my_name").say_my_name
 
-# Normal addition test
->>> add_integer(0)
-98
->>> add_integer(-1)
-97
->>> add_integer(10.5)
-108
+======Succes cases======
 
-# Type Errors
->>> add_integer(10+5j)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer([])
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer({})
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer(set())
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+>>> say_my_name("Naruto", "Uzumaki")
+My name is Naruto Uzumaki
 
->>> add_integer("")
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+>>> say_my_name("Naruto")
+My name is Naruto 
 
-# Two input addition type errors
->>> add_integer(10, 10+5j)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, [])
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, {})
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, set())
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+=====Empty cases========
 
->>> add_integer(10, "")
+>>> say_my_name("")
 Traceback (most recent call last):
 ...
-TypeError: b must be an integer
+TypeError: first_name must be a string
+
+Por si acaso
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(None, "Dulce")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
+>>> say_my_name("Vino", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(, "Lee")
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+
+=======Error of types========
+
+>>> say_my_name("Harry", 2)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(2, "Harry")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+=======Argument Errors=========
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name("Martin", "martinez", "andres")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(, 5)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
