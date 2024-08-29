@@ -206,4 +206,4 @@ class Base:
         t.left(90)
         t.forward(rect.width)
         t.left(90)
-        t.forward(rect.height)s
+        t.forward(rect.height)
