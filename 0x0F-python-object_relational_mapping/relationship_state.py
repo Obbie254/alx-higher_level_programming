@@ -1,19 +1,21 @@
 #!/usr/bin/python3
-"""Improved model.city"""
-from sqlalchemy import Column, ForeignKey, Integer, String
+"""Improved model.states"""
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
+from relationship_city import Base, City
 
-Base = declarative_base()
 
-
-class City(Base):
-    """Represents a city for a MySQL database.
+class State(Base):
+    """Represents a state for a MySQL database.
     Attributes:
-        id (sqlalchemy.Column): The city's id.
-        name (sqlalchemy.Column): The city's name.
-        state_id (sqlalchemy.Column): The city's state id.
+        __tablename__ (str): The name of the MySQL table to store States.
+        id (sqlalchemy.Integer): The state's id.
+        name (sqlalchemy.String): The state's name.
+        cities (sqlalchemy.orm.relationship): The State-City relationship.
     """
-    __tablename__ = "cities"
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
+
+    cities = relationship("City", backref="state", cascade="all, delete")
